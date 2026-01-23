@@ -1,0 +1,10 @@
+/* Underline links in content area only, excluding cards */
+.prose a {
+  text-decoration: underline;
+}
+
+.prose a[class*="card"],
+.prose [class*="card"] a,
+.prose [class*="Card"] a {
+  text-decoration: none;
+}

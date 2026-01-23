@@ -1,0 +1,91 @@
+---
+title: "FAQ"
+description: "Frequently asked questions and troubleshooting for specific game clients"
+---
+
+This page covers common issues and questions specific to individual game clients. For launcher-related issues, see the [Launcher FAQ](/launcher/faq).
+
+## General Game Issues
+
+<AccordionGroup>
+
+  <Accordion title="Why won't my game launch or start?">
+    There are several common causes:
+
+    1. **Missing Dependencies** - Install the [required redistributables](https://chse.dev/redists) first
+    2. **Windows 11 Core Isolation** - If you're on Windows 11, you may need to [disable Core Isolation](https://www.youtube.com/watch?v=5FWX4AjZuEw) and run the client as admin.
+    3. **Steam Required** - Some games require Steam to be running (you don't need to own the game, just have Steam open)
+    4. **Corrupt Files** - Verify your game files in the launcher
+  </Accordion>
+
+  <Accordion title="Why does my game say 'Steam must be running'?">
+    Some games require Steam to be open, even if you downloaded them through the CB Launcher. You don't need to own the game on Steam - just have the Steam application running in the background. You can also try adding `-nosteam` to the game's launch properties, though this doesn't work for all games.
+  </Accordion>
+</AccordionGroup>
+
+## HMW (HorizonMW)
+
+<AccordionGroup>
+  <Accordion title="I tried all the steps above and I'm still crashing on HMW">
+    You may need to disable the CB Extension if you're still experiencing crashes. Open HMW game settings in the launcher and enable "Disable CB Extension".
+  </Accordion>
+
+  <Accordion title="How do I unlock all items in HMW?">
+    Use the "Unlock All" button in the launcher on the HMW page. This feature was recently fixed.
+  </Accordion>
+</AccordionGroup>
+
+## IW7-Mod (Infinite Warfare)
+
+<AccordionGroup>
+  <Accordion title="All options in the menu are locked">
+    You need to create a class first:
+    1. Click "Create Class"
+    2. Choose one of the rig types
+    3. Create your class
+    4. The server browser will then unlock
+  </Accordion>
+
+  <Accordion title="I'm getting 'Disc Read Errors'">
+    Try verifying your game files in the launcher. This error typically indicates corrupted or missing files.
+  </Accordion>
+
+  <Accordion title="I'm getting 'Memory Errors'">
+    Make sure Steam is open when launching the game.
+  </Accordion>
+</AccordionGroup>
+
+## IW6x (Ghosts)
+
+<AccordionGroup>
+  <Accordion title="My controller or mouse isn't working in the menus">
+    This is a known issue. Execute the `vid_restart` command in the console.
+  </Accordion>
+</AccordionGroup>
+
+## Playing with Friends
+
+<AccordionGroup>
+  <Accordion title="How do I play private matches with friends?">
+    Due to these clients being separated from Steam's infrastructure, you can't add friends the traditional way. Instead, you need to use a VPN solution like Radmin VPN or port forward.
+
+    Full guide available at: [Private Match Guide](/guides/private-match)
+  </Accordion>
+
+  <Accordion title="My friend gets disconnected when trying to join my private match">
+    Make sure you've properly configured port forwarding or are using a VPN solution like Radmin VPN. See the [Private Match Guide](/guides/private-match) for setup instructions.
+  </Accordion>
+</AccordionGroup>
+
+## Still Need Help?
+
+If your issue isn't covered here:
+1. Check the [Launcher FAQ](/launcher/faq) for general issues
+2. Check the Discord support channel for similar issues
+3. Provide detailed information when asking for help:
+   - What game you're having issues with
+   - Any error messages or codes
+   - What you've already tried
+   - Your Windows version (10 or 11)
+
+Join our [Discord](https://cbservers.xyz/discord) for support.

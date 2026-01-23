@@ -1,0 +1,90 @@
+---
+title: "Custom Map Install Guide for BO3"
+description: "How to install custom maps for Black Ops 3 torrent version"
+---
+
+## Prerequisites
+
+- BO3 Game (see our [torrent guide](/guides/torrents) or use the [launcher](/launcher))
+- BOIII Client (see our [BOIII download](/games/boiii) page)
+- [SteamCMD](https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip) (Steam Console Client)
+
+## Installation Guide
+
+<Steps>
+  <Step title="Find the custom map">
+    1. Visit the [Black Ops 3 Steam Workshop](https://steamcommunity.com/app/311210/workshop/)
+    2. Search for the map you want to download
+    3. When you're on the map page, copy the **mod ID** from the end of the URL
+
+    ![Copy mod ID from URL](https://i.imgur.com/WEYNDpF.png)
+  </Step>
+  <Step title="Setup SteamCMD">
+    1. Download [SteamCMD](https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip)
+    2. Extract SteamCMD to its own folder
+
+    ![SteamCMD folder](https://i.imgur.com/YOXO766.png)
+  </Step>
+  <Step title="Download the map with SteamCMD">
+    1. Open `steamcmd.exe` and wait for it to update
+
+    ![SteamCMD updating](https://i.imgur.com/UcwXX1e.png)
+
+    2. Type `login anonymous` and press enter to log into an anonymous account
+
+    ![SteamCMD login](https://i.imgur.com/aEb2ddt.png)
+
+    3. Type `workshop_download_item 311210 MODID` and replace `MODID` with the mod ID you copied
+       - If the download times out, add `validate` at the end: `workshop_download_item 311210 2926551695 validate`
+    4. Wait for the download to complete (there is no progress bar)
+    5. Once complete, locate the downloaded map folder
+
+    ![Downloaded map location](https://i.imgur.com/K0SPrNj.png)
+  </Step>
+  <Step title="Create the usermaps folder">
+    1. Navigate to your BO3 install folder (for torrent version, it's usually called `t7_full_game`)
+    2. Create a folder called `usermaps` inside if it doesn't exist
+
+    ![Usermaps folder](https://i.imgur.com/cFdvAbH.png)
+  </Step>
+  <Step title="Create the map folder">
+    1. Open the downloaded map folder from SteamCMD
+    2. Find the files that start with `zm_` or `mp_`
+
+    ![Map files](https://i.imgur.com/CvlL4Ad.png)
+
+    3. Right-click one of these files and copy the name (e.g., `zm_quiet_cosmos`)
+    4. In your BO3 `usermaps` folder, create a new folder with that exact name
+  </Step>
+  <Step title="Copy map files">
+    1. Select all files in the downloaded map folder (press `Ctrl+A`)
+    2. Copy them (`Ctrl+C`)
+    3. Paste them (`Ctrl+V`) into the map folder you created in `usermaps`
+
+    ![Copy files to usermaps](https://i.imgur.com/CvlL4Ad.png)
+  </Step>
+  <Step title="Launch and play">
+    1. Load up the BOIII Client
+    2. Go into solo or custom games
+    3. Your custom map should appear in the map selection screen
+
+    ![Custom map in game](https://i.imgur.com/5bbZyFP.png)
+  </Step>
+</Steps>
+
+## Summary
+
+The final folder structure should look like:
+
+```
+BO3 Install Folder/
+└── usermaps/
+    └── zm_mapname/
+        ├── zm_mapname.ff
+        ├── zm_mapname.xpak
+        └── (other map files)
+```
+
+## Need Help?
+
+If you need more help or support, please join our [Discord](https://cbservers.xyz/discord).

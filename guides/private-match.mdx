@@ -1,0 +1,204 @@
+---
+title: "How to Play Private Match with Friends"
+description: "Connect and play with friends using Radmin VPN or port forwarding"
+---
+
+## Introduction
+
+Due to the nature of these community clients being separated from Steam's infrastructure, you can't add friends through Steam and join their games directly. Instead, you'll need to connect to an active match using a VPN solution like Radmin VPN or by port forwarding.
+
+## Prerequisites
+
+- One of the supported game clients installed:
+  - [BOIII (Black Ops 3)](/games/boiii)
+  - [S1x (Advanced Warfare)](/games/s1x)
+  - [IW6x (Ghosts)](/games/iw6x)
+  - [H1-Mod (Modern Warfare Remastered)](/games/h1-mod)
+  - [IW7-Mod (Infinite Warfare)](/games/iw7-mod)
+  - [HMW (HorizonMW)](/games/hmw)
+- The client executable in your game folder
+
+## Client Port Numbers
+
+| Client | Port |
+|--------|------|
+| BOIII | `27017` |
+| S1x | `27016` |
+| IW6x | `27016` |
+| H1-Mod | `27016` |
+| IW7-Mod | `27016` |
+| HMW | `27016` |
+
+---
+
+<Tabs>
+  <Tab title="Radmin VPN (Easier)">
+    ## Method 1: Hosting with Radmin VPN
+
+    This is the easier method and doesn't require router configuration.
+
+    ### Additional Prerequisites
+
+    - [Radmin VPN](https://www.radmin-vpn.com/) installed on all players' computers
+
+    ### Initial Setup (All Players)
+
+    <Steps>
+      <Step title="Install Radmin VPN">
+        Download and install [Radmin VPN](https://www.radmin-vpn.com/).
+      </Step>
+      <Step title="Allow client through Windows Firewall">
+        1. Go to Windows Firewall settings
+        2. Click **Change Settings** > **Allow another app**
+        3. Browse to your client executable
+        4. Ensure all boxes are ticked, then click **OK**
+
+        [Video guide for firewall settings](https://www.youtube.com/watch?v=Kxy36eKoYNk)
+      </Step>
+      <Step title="Create firewall rules for your client port">
+        1. Open Windows Firewall with Advanced Security
+        2. Create both **Inbound** and **Outbound** rules for your client's port (see port numbers above)
+        3. **Important:** Set protocol to **UDP**, not TCP
+
+        [Video guide for firewall rules](https://youtu.be/cRZ26576d1g?t=79)
+      </Step>
+    </Steps>
+
+    ### Network Setup (Host)
+
+    <Steps>
+      <Step title="Create a Radmin VPN network">
+        1. Open Radmin VPN
+        2. Click **Network > Create Network**
+        3. Set a network name and password
+      </Step>
+      <Step title="Share credentials">
+        Give the network name and password to your friends.
+      </Step>
+    </Steps>
+
+    ### Network Setup (Friends)
+
+    <Steps>
+      <Step title="Join the network">
+        1. Open Radmin VPN
+        2. Click **Network > Join Network**
+        3. Enter the network name and password provided by the host
+        4. Click **Join**
+      </Step>
+    </Steps>
+
+    ### Starting the Match (Host)
+
+    <Steps>
+      <Step title="Start a match">
+        1. Open the client executable (e.g., `boiii.exe`)
+        2. Navigate to your desired mode, choose a map and start the match
+      </Step>
+      <Step title="Find your Radmin IP">
+        1. Open Radmin VPN
+        2. Your IP will be displayed in the network list (e.g., `26.118.191.42`)
+        3. Share this IP with your friends
+
+        ![Radmin VPN IP](https://i.imgur.com/LCOFHby.png)
+      </Step>
+      <Step title="Limit player count (optional)">
+        1. Open the console (`` ` `` or `~` key, under ESC)
+        2. Type: `com_maxclients X` or `sv_maxclients X` (replace X with desired player count)
+        3. Example: `com_maxclients 2` for 2 players total
+      </Step>
+    </Steps>
+
+    ### Joining the Match (Friends)
+
+    <Steps>
+      <Step title="Wait for host">
+        Wait for the host to spawn in-game.
+      </Step>
+      <Step title="Connect via console">
+        1. Open the in-game console (`` ` `` or `~` key)
+           - On 60% keyboards: `Fn+ESC`
+        2. Type: `connect RadminIP:PORT`
+        3. Example: `connect 26.118.191.42:27017`
+        4. Use the Radmin IP provided by the host and the appropriate port for your client
+      </Step>
+      <Step title="Play">
+        Wait for the game to load and have fun!
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Port Forwarding (Advanced)">
+    ## Method 2: Hosting with Public IP and Port Forwarding
+
+    This method requires access to your router settings and is recommended only if you have a static public IP.
+
+    ### Host Setup
+
+    <Steps>
+      <Step title="Port forward on your router">
+        Forward the UDP port for your specific client (see port numbers above) to the device you're playing on.
+
+        Consult your router's documentation for port forwarding instructions or follow this [port forward guide](https://portforward.com/how-to-port-forward/).
+
+        <Warning>
+        Only recommended if your public IP is static.
+        </Warning>
+      </Step>
+      <Step title="Create Windows Firewall inbound rule">
+        1. Open Windows Defender Firewall with Advanced Security
+        2. Create an inbound rule to permit UDP traffic on your client's port
+
+        [Video guide for firewall configuration](https://youtu.be/cRZ26576d1g?t=79)
+      </Step>
+      <Step title="Allow client through Windows Firewall">
+        1. Go to Windows Firewall settings
+        2. Click **Change Settings** > **Allow another app**
+        3. Browse to your client executable (e.g., `boiii.exe`, `s1x.exe`, etc.)
+        4. Ensure all boxes are ticked, then click **OK**
+
+        [Video guide for firewall settings](https://www.youtube.com/watch?v=Kxy36eKoYNk)
+      </Step>
+      <Step title="Disable antivirus interference">
+        Ensure no other antivirus programs are blocking or filtering network access to the application.
+      </Step>
+      <Step title="Find your public IP">
+        Visit [whatismyipaddress.com](https://whatismyipaddress.com/) and note down your IPv4 address.
+      </Step>
+    </Steps>
+
+    ### Starting the Match (Host)
+
+    <Steps>
+      <Step title="Start a match">
+        1. Open the client executable (e.g., `boiii.exe`)
+        2. Navigate to your desired mode, choose a map and start the match
+      </Step>
+      <Step title="Limit player count (optional)">
+        1. Open the console (`` ` `` or `~` key, under ESC)
+        2. Type: `com_maxclients X` or `sv_maxclients X` (replace X with desired player count)
+        3. Example: `com_maxclients 2` for 2 players total
+      </Step>
+    </Steps>
+
+    ### Joining the Match (Friends)
+
+    <Steps>
+      <Step title="Wait for host">
+        Wait for the host to be in the actual game, not just in the lobby.
+      </Step>
+      <Step title="Connect via console">
+        1. Open the in-game console (`` ` `` or `~` key)
+           - On 60% keyboards: `Fn+ESC`
+        2. Type: `connect IP:PORT`
+        3. Example: `connect 192.168.1.100:27017`
+        4. Use the host's public IP and the appropriate port for your client
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+---
+
+## Need Help?
+
+If you need more help or support, please join our [Discord](https://cbservers.xyz/discord).
