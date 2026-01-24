@@ -1,18 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 748 187">
+<svg xmlns="http://www.w3.org/2000/svg" width="718" height="151" viewBox="0 0 718 151">
   <defs>
     <style>
-      .cls-1, .cls-2 {
-        font-size: 300px;
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 299.969px;
+      }
+
+      .cls-2, .cls-3 {
         text-anchor: middle;
         font-family: "New Space";
       }
 
-      .cls-2 {
+      .cls-3 {
+        font-size: 300px;
         fill: #fff;
       }
     </style>
   </defs>
-  <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" width="188" height="187" rx="10" ry="10"/>
-  <text id="SERVERS" class="cls-1" transform="translate(481.234 124.525) scale(0.284)"><tspan x="0">SERVERS</tspan></text>
-  <text id="CB" class="cls-2" transform="translate(94.234 124.525) scale(0.284)"><tspan x="0">CB</tspan></text>
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" d="M9.755-.282H142.13a10,10,0,0,1,10,10V141.282a10,10,0,0,1-10,10H9.755a10,10,0,0,1-10-10V9.718A10,10,0,0,1,9.755-.282Z"/>
+  <text id="SERVERS" class="cls-2" transform="translate(451.234 106.525) scale(0.284)"><tspan x="0">SERVERS</tspan></text>
+  <text id="CB" class="cls-3" transform="translate(76.234 106.525) scale(0.284)"><tspan x="0">CB</tspan></text>
 </svg>

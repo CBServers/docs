@@ -1,0 +1,89 @@
+---
+title: "Linux Installation"
+description: "How to run the CB Servers Launcher on Linux using Steam and Proton"
+---
+
+<Info>
+The CB Servers Launcher is a Windows application. On Linux, you can run it through Steam using Proton.
+</Info>
+
+## Prerequisites
+
+- Steam installed on your Linux system
+- A Proton compatibility layer (Proton Hotfix recommended)
+
+## Installation
+
+<iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/_1RNgyqDeU0" allowFullScreen></iframe>
+
+<Steps>
+  <Step title="Download the launcher">
+    Download **[cb-launcher.exe](https://github.com/CBServers/updater/raw/main/updater/cb-launcher/cb-launcher.exe)** and save it to a folder you'll remember (e.g., `~/Games/CBLauncher/`).
+  </Step>
+  <Step title="Add as a non-Steam game">
+    Open Steam and click **Add a Game** in the bottom left corner, then select **Add a Non-Steam Game**.
+  </Step>
+  <Step title="Browse for the launcher">
+    Click **Browse** and navigate to where you saved `cb-launcher.exe`. Select it and click **Open**, then click **Add Selected Programs**.
+  </Step>
+  <Step title="Enable Proton compatibility">
+    Find `cb-launcher.exe` in your Steam library. Right-click it and select **Properties**, then go to the **Compatibility** tab.
+
+    Check **Force the use of a specific Steam Play compatibility tool** and select a Proton version (Proton Hotfix is recommended).
+  </Step>
+  <Step title="Launch and configure">
+    Click **Play** to start the launcher. When selecting a game install location, navigate to:
+    1. Click into `/`
+    2. Go to `home`
+    3. Select your username
+    4. Choose or create a folder for your games
+
+    Your path should look like `Z:\home\yourusername\Games`.
+  </Step>
+  <Step title="Wait for installation">
+    Select your game and wait for the download to complete. Once finished, you can play.
+  </Step>
+</Steps>
+
+## For Steam Version Owners
+
+If you own a supported game on Steam and want to use those files with the launcher, you need to enable hidden folders in the Wine file browser.
+
+<Steps>
+  <Step title="Install Protontricks">
+    Install Protontricks on your system:
+    - **Bazzite**: Pre-installed
+    - **Other distros**: Install via Discover, Software Center, or your package manager
+  </Step>
+  <Step title="Run Protontricks">
+    Open Protontricks and select **non-steam shortcut: cb-launcher.exe** (or whatever name you gave it).
+  </Step>
+  <Step title="Configure Wine">
+    Wait for the dialog to appear, then select **Select the default wineprefix** and click **Run winecfg**.
+  </Step>
+  <Step title="Show hidden files">
+    In the Wine configuration window, click the **Drives** tab, then click **Show dot files** at the bottom. This allows the Wine file browser to show hidden folders like `.local`.
+  </Step>
+  <Step title="Navigate to Steam files">
+    When setting up a game in the launcher, navigate to your Steam library folder. See the table below for common locations.
+  </Step>
+</Steps>
+
+## Common Steam Library Paths
+
+Steam's location varies depending on how it was installed:
+
+| Installation Method | Steam Library Path |
+|--------------------|--------------------|
+| Native (terminal/package manager) | `~/.local/share/Steam/steamapps/common/` |
+| Steam Deck | `~/.local/share/Steam/steamapps/common/` |
+| Flatpak | `~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/` |
+| Snap | `~/snap/steam/common/.local/share/Steam/steamapps/common/` |
+
+<Note>
+In the Wine file browser, these paths appear under `Z:\home\yourusername\` followed by the rest of the path. For example, a native Steam install would be at `Z:\home\yourusername\.local\share\Steam\steamapps\common\`.
+</Note>
+
+## Need Help?
+
+If you need more help or support, please join our [Discord](https://cbservers.xyz/discord).

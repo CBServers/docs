@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
+  "theme": "palm",
   "name": "CB Servers",
   "colors": {
     "primary": "#000000",
@@ -19,6 +19,7 @@
         "pages": [
           "launcher/index",
           "launcher/install",
+          "launcher/linux",
           "launcher/use",
           "launcher/faq"
         ]
@@ -58,21 +59,31 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Discord",
-        "href": "https://cbservers.xyz/discord"
-      }
-    ],
     "primary": {
       "type": "button",
       "label": "Download Launcher",
       "href": "/launcher"
-    }
+    },
+    "links": [
+      {
+        "label": "Clients",
+        "href": "/games"
+      },
+      {
+        "label": "Guides",
+        "href": "/guides"
+      },
+      {
+        "label": "Discord",
+        "href": "https://cbservers.xyz/discord"
+      }
+    ]
   },
   "footer": {
     "socials": {
-      "discord": "https://cbservers.xyz/discord"
+      "discord": "https://cbservers.xyz/discord",
+      "x": "https://x.com/ServersCB",
+      "github": "https://github.com/CBServers"
     }
   }
 }
