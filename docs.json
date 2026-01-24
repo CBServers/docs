@@ -61,10 +61,14 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Download Launcher",
-      "href": "/launcher"
+      "label": "Discord",
+      "href": "https://cbservers.xyz/discord"
     },
     "links": [
+      {
+        "label": "Launcher",
+        "href": "/launcher"
+      },
       {
         "label": "Clients",
         "href": "/games"
@@ -72,10 +76,6 @@
       {
         "label": "Guides",
         "href": "/guides"
-      },
-      {
-        "label": "Discord",
-        "href": "https://cbservers.xyz/discord"
       }
     ]
   },
