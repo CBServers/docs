@@ -28,6 +28,9 @@
         "group": "Clients",
         "pages": [
           "games/index",
+          "games/iw4x",
+          "games/iw5",
+          "games/t6",
           "games/boiii",
           "games/iw6x",
           "games/s1x",
