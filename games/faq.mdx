@@ -13,13 +13,20 @@ This page covers common issues and questions specific to individual game clients
     There are several common causes:
 
     1. **Missing Dependencies** - Install the [required redistributables](https://chse.dev/redists) first
-    2. **Windows 11 Core Isolation** - If you're on Windows 11, you may need to [disable Core Isolation](https://www.youtube.com/watch?v=5FWX4AjZuEw) and run the client as admin.
+    2. **Windows Security Settings** - In Windows Security settings, go to **App & browser control → Exploit protection settings** and turn off "Force randomization for images". Then, go to **Device security → Core isolation details** and turn off "Memory integrity". Restart your PC after making these changes. If the game still doesn't launch, try running the game's executable as administrator (right-click → Run as administrator).
     3. **Steam Required** - Some games require Steam to be running (you don't need to own the game, just have Steam open)
     4. **Corrupt Files** - Verify your game files in the launcher
   </Accordion>
 
   <Accordion title="Why does my game say 'Steam must be running'?">
     Some games require Steam to be open, even if you downloaded them through the CB Launcher. You don't need to own the game on Steam - just have the Steam application running in the background. You can also try adding `-nosteam` to the game's launch properties, though this doesn't work for all games.
+  </Accordion>
+
+  <Accordion title="How do I change my in-game name?">
+    For most clients (except Plutonium which requires an account), open the console using the tilde (`~`) key and type:
+    ```
+    /name yourname
+    ```
   </Accordion>
 </AccordionGroup>
 
@@ -32,6 +39,12 @@ This page covers common issues and questions specific to individual game clients
 
   <Accordion title="How do I unlock all items in HMW?">
     Use the "Unlock All" button in the launcher on the HMW page. This feature was recently fixed.
+  </Accordion>
+
+  <Accordion title="How do I fix the 'Disk read imagefile59' error?">
+    Delete `config_mp.cfg` from your `players2` folder. When you load back up, you'll need to redo your settings.
+
+    Then, make sure you keep **"Fill remaining memory"** turned off. This can be found in **Options → Graphics**.
   </Accordion>
 </AccordionGroup>
 
@@ -52,6 +65,17 @@ This page covers common issues and questions specific to individual game clients
 
   <Accordion title="I'm getting 'Memory Errors'">
     Make sure Steam is open when launching the game.
+  </Accordion>
+
+  <Accordion title="My game is stuck on '[Updater] Downloading file X'">
+    The client is downloading required files in the background. This may not appear to be progressing, but please wait and the game will launch once the update completes.
+  </Accordion>
+
+  <Accordion title="Game gets stuck loading or shows a black screen when starting Muliplayer or Zombies match">
+    Open the console using the tilde (`~`) key and enter:
+    ```
+    map_start_fix 1
+    ```
   </Accordion>
 </AccordionGroup>
 

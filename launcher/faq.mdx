@@ -7,7 +7,7 @@ description: "Frequently asked questions about the CB Servers Launcher"
 
 <AccordionGroup>
   <Accordion title="Is the launcher safe to use?">
-    Yes, the launcher is safe. Some antivirus software may flag it as suspicious because it downloads and modifies game files. You may need to add an exception for the launcher in your antivirus settings.
+    Yes, the launcher is safe and [open source](https://github.com/CBServers/cb-launcher). Some antivirus software may flag it as suspicious because it downloads and modifies game files. You may need to add an exception for the launcher in your antivirus settings.
   </Accordion>
 
   <Accordion title="Do I need to own the games on Steam?">
@@ -19,11 +19,13 @@ description: "Frequently asked questions about the CB Servers Launcher"
   </Accordion>
 
   <Accordion title="Is the launcher affiliated with the original client developers?">
-    No. Our launcher is not affiliated or endorsed by AlterWare, Aurora, or Horizon MW. Please do not contact the original client maintainers with support requests regarding the launcher.
+    No. Our launcher is not affiliated or endorsed by IW4x, Plutonium, AlterWare, Aurora, or Horizon MW. Please do not contact the original client maintainers with support requests regarding the launcher.
   </Accordion>
 
   <Accordion title="What languages are supported?">
-    The CB Launcher games only support English. Multi-language support is not available at this time.
+    The CB Launcher only supports English localized game files. Multi-language support is not available at this time.
+
+    <Warning>If you're using an existing Steam installation with non-English language files, verifying game files through the launcher may cause issues. Switch your Steam game to English before verifying, or use a fresh download through the launcher instead.</Warning>
   </Accordion>
 
   <Accordion title="Which download server should I use?">
@@ -32,6 +34,12 @@ description: "Frequently asked questions about the CB Servers Launcher"
 
   <Accordion title="Where can I find the game files after downloading?">
     You can check where game files are stored by visiting the settings page for the desired game and navigating to it's install path.
+  </Accordion>
+
+  <Accordion title="How do I uninstall a game?">
+    Click on the **"Manage Install"** button on the game page and click **Uninstall**. This will remove all the game's files.
+
+    <Note>This is different from "Reset Settings" in the launcher's game options menu, which only resets launcher preferences (like game path, launch args, etc.) but does not delete the game from your PC.</Note>
   </Accordion>
 </AccordionGroup>
 
@@ -59,7 +67,7 @@ description: "Frequently asked questions about the CB Servers Launcher"
     There are several common causes:
 
     1. **Missing Dependencies** - Install the [required redistributables](https://chse.dev/redists) first
-    2. **Windows 11 Core Isolation** - If you're on Windows 11, you may need to [disable Core Isolation](https://www.youtube.com/watch?v=5FWX4AjZuEw) and run the client as admin.
+    2. **Windows Security Settings** - In Windows Security settings, go to **App & browser control → Exploit protection settings** and turn off "Force randomization for images". Then, go to **Device security → Core isolation details** and turn off "Memory integrity". Restart your PC after making these changes. If the game still doesn't launch, try running the game's executable as administrator (right-click → Run as administrator).
     3. **Steam Required** - Some games require Steam to be running (you don't need to own the game, just have Steam open)
     4. **Corrupt Files** - Verify your game files in the launcher
   </Accordion>
@@ -68,7 +76,7 @@ description: "Frequently asked questions about the CB Servers Launcher"
     Make sure you're selecting the correct folder:
     - For Steam games, select the game's main folder (not the Steam folder)
     - For torrented games, select the folder containing the game executable
-    - The folder should contain files like the game's main `.exe` or data files
+    - The folder should contain files like the game's main `.exe` or data `.ff` files
   </Accordion>
 
   <Accordion title="I'm getting crazy frame drops despite having good hardware">
