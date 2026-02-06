@@ -9,50 +9,108 @@
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Overview",
-        "pages": ["index"]
-      },
-      {
-        "group": "Launcher",
-        "pages": [
-          "launcher/index",
-          "launcher/install",
-          "launcher/linux",
-          "launcher/use",
-          "launcher/faq"
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["index"]
+          },
+          {
+            "group": "Launcher",
+            "pages": [
+              "launcher/index",
+              "launcher/install",
+              "launcher/linux",
+              "launcher/use",
+              "launcher/faq"
+            ]
+          },
+          {
+            "group": "Clients",
+            "pages": [
+              "games/index",
+              "games/iw4x",
+              "games/iw5",
+              "games/t6",
+              "games/boiii",
+              "games/iw6x",
+              "games/s1x",
+              "games/h1-mod",
+              "games/iw7-mod",
+              "games/hmw",
+              "games/faq"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/index",
+              "guides/torrents",
+              "guides/private-match",
+              "guides/custom-maps-bo3"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": []
+          }
         ]
       },
       {
-        "group": "Clients",
-        "pages": [
-          "games/index",
-          "games/iw4x",
-          "games/iw5",
-          "games/t6",
-          "games/boiii",
-          "games/iw6x",
-          "games/s1x",
-          "games/h1-mod",
-          "games/iw7-mod",
-          "games/hmw",
-          "games/faq"
-        ]
-      },
-      {
-        "group": "Guides",
-        "pages": [
-          "guides/index",
-          "guides/torrents",
-          "guides/private-match",
-          "guides/custom-maps-bo3"
-        ]
-      },
-      {
-        "group": "Troubleshooting",
-        "pages": [
-          "troubleshooting/fix-vip"
+        "tab": "Server Info",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["servers/index", "servers/vip", "troubleshooting/fix-vip"]
+          },
+          {
+            "group": "Black Ops 3 (BOIII)",
+            "pages": [
+              "servers/boiii/commands",
+              "servers/boiii/afterhit",
+              "servers/boiii/custom-maps"
+            ]
+          },
+          {
+            "group": "Ghosts (IW6x)",
+            "pages": [
+              "servers/iw6x/commands",
+              "servers/iw6x/custom-guns"
+            ]
+          },
+          {
+            "group": "Advanced Warfare (S1x)",
+            "pages": [
+              "servers/s1x/commands",
+              "servers/s1x/custom-guns",
+              "servers/s1x/afterhit",
+              "servers/s1x/tac-tk-classes"
+            ]
+          },
+          {
+            "group": "MWR (H1-Mod)",
+            "pages": [
+              "servers/h1-mod/commands",
+              "servers/h1-mod/custom-guns",
+              "servers/h1-mod/afterhit"
+            ]
+          },
+          {
+            "group": "Infinite Warfare (IW7-Mod)",
+            "pages": [
+              "servers/iw7-mod/commands"
+            ]
+          },
+          {
+            "group": "HorizonMW (HMW)",
+            "pages": [
+              "servers/hmw/commands",
+              "servers/hmw/overkill-alt",
+              "servers/hmw/afterhit"
+            ]
+          }
         ]
       }
     ]
@@ -79,6 +137,10 @@
       {
         "label": "Guides",
         "href": "/guides"
+      },
+      {
+        "label": "Server Info",
+        "href": "/servers"
       }
     ]
   },
