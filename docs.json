@@ -77,7 +77,8 @@
             "group": "Ghosts (IW6x)",
             "pages": [
               "servers/iw6x/commands",
-              "servers/iw6x/custom-guns"
+              "servers/iw6x/custom-guns",
+              "servers/iw6x/afterhit"
             ]
           },
           {
@@ -100,7 +101,8 @@
           {
             "group": "Infinite Warfare (IW7-Mod)",
             "pages": [
-              "servers/iw7-mod/commands"
+              "servers/iw7-mod/commands",
+              "servers/iw7-mod/afterhit"
             ]
           },
           {
