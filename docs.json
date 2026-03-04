@@ -59,7 +59,7 @@
         ]
       },
       {
-        "tab": "Server Info",
+        "tab": "Servers",
         "groups": [
           {
             "group": "Overview",
@@ -141,7 +141,7 @@
         "href": "/guides"
       },
       {
-        "label": "Server Info",
+        "label": "Servers",
         "href": "/servers"
       }
     ]

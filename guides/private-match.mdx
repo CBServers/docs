@@ -5,26 +5,50 @@ description: "Connect and play with friends using Radmin VPN or port forwarding"
 
 ## Introduction
 
-Due to the nature of these community clients being separated from Steam's infrastructure, you can't add friends through Steam and join their games directly. Instead, you'll need to connect to an active match using a VPN solution like Radmin VPN or by port forwarding.
+Due to the nature of these community clients being separated from Steam's infrastructure, you can't add friends through Steam and join their games directly. The connection method depends on which game you're playing. Most games use Radmin VPN or port forwarding, while Plutonium clients have a built-in friends system.
 
 ## Prerequisites
 
 - One of the supported game clients installed:
-  - [BOIII (Black Ops 3)](/games/boiii)
-  - [S1x (Advanced Warfare)](/games/s1x)
+  - [IW4x (Modern Warfare 2)](/games/iw4x)
+  - [IW5 (Modern Warfare 3)](/games/iw5)
+  - [T6 (Black Ops 2)](/games/t6)
   - [IW6x (Ghosts)](/games/iw6x)
+  - [S1x (Advanced Warfare)](/games/s1x)
+  - [BOIII (Black Ops 3)](/games/boiii)
   - [H1-Mod (Modern Warfare Remastered)](/games/h1-mod)
   - [IW7-Mod (Infinite Warfare)](/games/iw7-mod)
   - [HMW (HorizonMW)](/games/hmw)
 - The client executable in your game folder
 
-## Client Port Numbers
+## Games with Built-in Friends
+
+Some clients handle private matches through their own friends system rather than direct IP connections.
+
+| Game | How to Connect |
+|------|---------------|
+| Modern Warfare 3 MP (IW5-Mod) | Use the in-game friends list. Manage friends through the [Plutonium Forums](https://forum.plutonium.pw/). |
+| Black Ops 2 MP/ZM (T6) | Use the in-game friends list. Manage friends through the [Plutonium Forums](https://forum.plutonium.pw/). |
+
+## Singleplayer / Spec Ops Guides
+
+For singleplayer or Spec Ops private matches, refer to these external guides:
+
+- [Modern Warfare 2 SP / Spec Ops (IW4-SP)](https://forum.alterware.dev/t/iw4-singleplayer-spec-ops-private-match-guide/55)
+- [Modern Warfare 3 SP / Spec Ops (IW5-Mod)](https://forum.alterware.dev/t/iw5-singleplayer-spec-ops-mp-private-match-guide/1068)
+
+## Radmin VPN / Port Forwarding
+
+The following games require Radmin VPN or port forwarding to play private matches with friends.
+
+### Client Port Numbers
 
 | Client | Port |
 |--------|------|
-| BOIII | `27017` |
-| S1x | `27016` |
+| IW4x | `28960` |
 | IW6x | `27016` |
+| S1x | `27016` |
+| BOIII | `27017` |
 | H1-Mod | `27016` |
 | IW7-Mod | `27016` |
 | HMW | `27016` |
