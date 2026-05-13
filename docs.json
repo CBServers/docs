@@ -31,6 +31,7 @@
             "group": "Clients",
             "pages": [
               "games/index",
+              "games/cod4x",
               "games/t4",
               "games/iw4x",
               "games/t5",
@@ -41,6 +42,8 @@
               "games/boiii",
               "games/h1-mod",
               "games/iw7-mod",
+              "games/bo4",
+              "games/h2-mod",
               "games/hmw",
               "games/faq"
             ]
@@ -120,8 +123,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "navbar": {
     "primary": {
