@@ -1,22 +1,93 @@
 ---
 title: "How to Play Private Match with Friends"
-description: "Connect and play with friends using Radmin VPN or port forwarding"
+description: "Connect and play with friends using Discord, Radmin VPN, or port forwarding"
 ---
 
 ## Introduction
 
-Due to the nature of these community clients being separated from Steam's infrastructure, you can't add friends through Steam and join their games directly. The connection method depends on which game you're playing. Most games use Radmin VPN or port forwarding, while Plutonium clients have a built-in friends system.
+Due to the nature of these community clients being separated from Steam's infrastructure, you can't add friends through Steam and join their games directly. The connection method depends on which game you're playing:
+
+- **Discord friends (easiest):** BOIII, IW6x, S1x, H1-Mod, and IW7-Mod can invite Discord friends straight into a private match with no extra software. [Jump to this method](#play-with-discord-friends-easiest).
+- **Built-in friends system:** Plutonium clients (T4, IW5-Mod, T5, T6) use their own in-game friends list. [Jump to this method](#games-with-built-in-friends).
+- **Radmin VPN or port forwarding:** Every other client, and a fallback for the clients above if the Discord method doesn't work. [Jump to this method](#radmin-vpn-or-port-forwarding).
+
+## Play with Discord Friends (Easiest)
+
+The following clients let you invite Discord friends straight into your private match. Connections are made automatically through NAT hole punching — no Radmin, Hamachi, or port forwarding required.
+
+| Game | Client |
+|------|--------|
+| Black Ops 3 | BOIII |
+| Ghosts | IW6x |
+| Advanced Warfare | S1x |
+| Modern Warfare Remastered | H1-Mod |
+| Infinite Warfare | IW7-Mod |
+
+### Hosting a Match
+
+<Steps>
+  <Step title="Start a private match">
+    Launch the client and start a private match as you normally would.
+  </Step>
+  <Step title="Open to Friends">
+    Open the pause menu and click **Open to Friends**. Your Discord status updates to show a joinable game.
+
+    <Tip>
+    Don't see the button? Some custom maps and mods (especially on BOIII) override the in-game menus. Open the console (`` ~ ``) and run `nat_host` instead — it does the exact same thing.
+    </Tip>
+  </Step>
+  <Step title="Invite friends">
+    Click the file attachment (**+**) button in a friend's DM or any text channel to send an invite. Friends can also join directly from your Discord status without an invite.
+  </Step>
+  <Step title="Close when finished">
+    Done playing? Open the pause menu and click **Close to Friends** (or run `nat_host` again in the console) to lock the match back down.
+  </Step>
+</Steps>
+
+### Joining a Friend
+
+<Tabs>
+  <Tab title="With Discord">
+    Click **Join** on your friend's Discord status, or accept their invite. You'll connect automatically — no IP or console commands needed.
+
+    <Info>
+    Make sure Discord is running and **Activity Status** is enabled so your game shows up.
+    </Info>
+  </Tab>
+  <Tab title="Manually (console)">
+    Use this if you'd rather not use Discord, or your game isn't showing up there.
+
+    <Steps>
+      <Step title="Host: open the match">
+        Open the console (`` ~ ``) and run `nat_host`. It prints a match token:
+
+        ```
+        [nat] opened private match to friends, token=a1b2c3d4e5f6a7b8
+        ```
+
+        Share that token with your friend.
+      </Step>
+      <Step title="Joiner: connect with the token">
+        Open the console (`` ~ ``) and run `nat_join <token>` (e.g. `nat_join a1b2c3d4e5f6a7b8`). You'll connect automatically.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+<Warning>
+This works when the host is on a normal home internet connection. Restrictive networks such as mobile hotspots, hotel, or public Wi-Fi can block the connection. If you can't connect, use [Radmin VPN or port forwarding](#radmin-vpn-or-port-forwarding) instead.
+</Warning>
 
 ## Games with Built-in Friends
 
-Some clients handle private matches through their own friends system rather than direct IP connections.
+Some clients handle private matches through their own friends system rather than direct IP connections. First [add each other to your friend list](https://plutonium.pw/docs/custom-games/#add-a-friend-to-your-friend-list), then use the per-game guide below to join a friend's custom game.
 
-| Game | How to Connect |
-|------|---------------|
-| World at War MP/ZM (T4) | Use the in-game friends list. Manage friends through the [Plutonium Forums](https://forum.plutonium.pw/). |
-| Modern Warfare 3 MP (IW5-Mod) | Use the in-game friends list. Manage friends through the [Plutonium Forums](https://forum.plutonium.pw/). |
-| Black Ops MP/ZM (T5) | Use the in-game friends list. Manage friends through the [Plutonium Forums](https://forum.plutonium.pw/). |
-| Black Ops 2 MP/ZM (T6) | Use the in-game friends list. Manage friends through the [Plutonium Forums](https://forum.plutonium.pw/). |
+| Game | Join Guide |
+|------|-----------|
+| World at War MP/ZM (T4) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#t4) |
+| Modern Warfare 3 MP (IW5-Mod) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#iw5) |
+| Black Ops MP/ZM (T5) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#t5) |
+| Black Ops 2 MP/ZM (T6) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#t6) |
 
 ## Singleplayer / Spec Ops Guides
 
@@ -25,9 +96,9 @@ For singleplayer or Spec Ops private matches, refer to these external guides:
 - [Modern Warfare 2 SP / Spec Ops (IW4-SP)](https://forum.alterware.dev/t/iw4-singleplayer-spec-ops-private-match-guide/55)
 - [Modern Warfare 3 SP / Spec Ops (IW5-Mod)](https://forum.alterware.dev/t/iw5-singleplayer-spec-ops-mp-private-match-guide/1068)
 
-## Radmin VPN / Port Forwarding
+## Radmin VPN or Port Forwarding
 
-The following games require Radmin VPN or port forwarding to play private matches with friends.
+This is the only method for IW4x and HMW, and the fallback for BOIII, IW6x, S1x, H1-Mod, and IW7-Mod when the [Discord method](#play-with-discord-friends-easiest) doesn't work.
 
 ### Client Port Numbers
 
