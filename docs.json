@@ -31,6 +31,9 @@
             "group": "Clients",
             "pages": [
               "games/index",
+              "games/cod1",
+              "games/coduo",
+              "games/cod2x",
               "games/cod4x",
               "games/t4",
               "games/iw4x",
