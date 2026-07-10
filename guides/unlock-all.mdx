@@ -1,0 +1,70 @@
+---
+title: "How to Unlock All Items"
+description: "Unlock all weapons, attachments, and other in-game items across supported clients"
+---
+
+## Introduction
+
+Most clients let you unlock everything in the game instantly, skipping the level grind. The method depends on which client you're playing:
+
+- **Console command:** World at War (T4) and Black Ops (T5) use a single console command. [Jump to this method](#console-command).
+- **In-game menu:** Every other supported client (except Modern Warfare) has an Unlock All option tucked into a menu. [Jump to this method](#in-game-menu).
+- **File replacement:** Modern Warfare (CoD4x) requires replacing a save file. [Jump to this method](#modern-warfare-cod4x).
+
+## Console Command
+
+<Steps>
+  <Step title="Open the console">
+    Press `` ` `` or `~` (under Esc) to open the console.
+  </Step>
+  <Step title="Run the command">
+    Type `unlockall` and press Enter.
+  </Step>
+</Steps>
+
+| Game | Client |
+|------|--------|
+| World at War | T4 |
+| Black Ops | T5 |
+
+## In-Game Menu
+
+Navigate to the menu path below for your client, then select **Unlock All** (or **Stats**, depending on the client).
+
+| Game | Client | Menu Path |
+|------|--------|-----------|
+| Modern Warfare 2 | IW4x | Barracks → Unlock Stats |
+| Modern Warfare 3 | IW5 | Barracks → Unlock All |
+| Black Ops 2 | T6 | Public Match → Unlock All |
+| Ghosts | IW6x | Online Play → Barracks → Unlock All |
+| Advanced Warfare | S1x | Play Online → Stats |
+| Black Ops 3 | BOIII | Select Mode → Play → Stats |
+| Modern Warfare Remastered | H1-Mod | Play Online → Stats |
+| Infinite Warfare | IW7-Mod | Select Mode → Public Match → Barracks → Stats |
+| Black Ops 4 | BO4 | Select Mode → Shield Options → Unlock All Settings |
+| MW2 Campaign Remastered | H2-Mod | Mission Select → Unlock All Missions and Intel (`F1` or the button in the bottom right) |
+| HorizonMW | HMW | Play Online → Personalization → Stats |
+
+## Modern Warfare (CoD4x)
+
+Modern Warfare doesn't have an in-game unlock option. Instead, you replace your save file with one that has everything already unlocked.
+
+<Steps>
+  <Step title="Download the unlocked save file">
+    Download [mpdata](https://github.com/CBServers/client-dowloads/raw/main/clients/other/mpdata).
+  </Step>
+  <Step title="Locate your profile folder">
+    Navigate to `%LOCALAPPDATA%\CallofDuty4MW\players\profiles\<PlayerName>\mpdata`, replacing `<PlayerName>` with your in-game profile name.
+  </Step>
+  <Step title="Replace the file">
+    Replace the existing `mpdata` file with the one you downloaded.
+
+    <Warning>
+    This overwrites your current multiplayer stats and progress. Back up your existing `mpdata` file first if you want to keep it.
+    </Warning>
+  </Step>
+</Steps>
+
+## Need Help?
+
+If you need more help or support, please join our [Discord](https://cbservers.xyz/discord).

@@ -1,0 +1,185 @@
+---
+title: "How to use Controller"
+description: "Set up Xbox, PlayStation, and other controllers for the game clients"
+---
+
+## Introduction
+
+Most of the game clients support controllers. The setup depends on your controller and whether the game has native controller support:
+
+- **Xbox controllers:** Plug-and-play on any natively supported game. [Jump to this method](#xbox-controllers).
+- **PS4 & PS5 controllers:** Need DS4Windows to work outside of Steam. [Jump to this method](#ps4--ps5-controllers).
+- **PS3 controllers:** Need ScpToolkit to work outside of Steam. [Jump to this method](#ps3-controllers).
+- **Games without native support:** COD1, CODUO, COD2, COD4, and MW3 (IW5-Mod) rely on Steam Input to map a controller to keyboard and mouse. [Jump to this method](#games-without-native-controller-support).
+
+<Warning>
+This applies only to games with **native controller support**. Games that rely on Steam Input are covered separately below — do **not** disable Steam's controller support for those.
+
+For natively supported games, disable Steam's controller support (or exit Steam completely) before using a controller.
+
+Go to **Steam** > **Settings** > **Controller** > **General Controller Settings** and **untick** the checkboxes shown below.
+
+![Disable Steam controller support](/images/controllers/disable-steam-controller.png)
+</Warning>
+
+## Xbox Controllers
+
+Xbox controllers are plug-and-play with the natively supported game clients. Simply plug your controller into your computer and launch the game.
+
+## PS4 & PS5 Controllers
+
+PS4 and PS5 controllers require additional software to work outside of Steam on Windows. We'll use DS4Windows.
+
+<Steps>
+  <Step title="Download DS4Windows">
+    Download [DS4Windows](https://ds4-windows.com/download/official/). We recommend the `DS4Windows_VERSION_x64.zip` file.
+  </Step>
+  <Step title="Extract it">
+    Open the downloaded zip and copy the `DS4Windows` folder somewhere safe, like your Documents folder.
+  </Step>
+  <Step title="Run DS4Windows">
+    Open the extracted folder, then run `DS4Windows`.
+
+    ![Run DS4Windows](/images/controllers/ds4windows-open.png)
+  </Step>
+  <Step title="Install .NET (if prompted)">
+    If you get a message like this, click **Yes**.
+
+    ![.NET error prompt](/images/controllers/ds4windows-net-error.png)
+
+    Your browser will open — download the **Windows x64** version, then install it.
+
+    ![Download .NET](/images/controllers/dotnet-download.png)
+
+    <Note>
+    If you still get an error after installing, download and run the .NET redist linked on the [DS4Windows release page](https://github.com/Ryochan7/DS4Windows/releases/latest), then try DS4Windows again.
+    </Note>
+  </Step>
+  <Step title="Choose a save location">
+    Select **Appdata** for your SaveWhere path.
+
+    ![Select Appdata](/images/controllers/ds4windows-savewhere.png)
+  </Step>
+  <Step title="Install the ViGEmBus driver">
+    Install the ViGEmBus driver when prompted.
+
+    ![Install ViGEmBus](/images/controllers/ds4windows-vigembus.png)
+  </Step>
+  <Step title="Connect your controller">
+    Connect your PS4 or PS5 controller to your PC.
+
+    <Tip>
+    Using Bluetooth? Follow the prompts inside DS4Windows to pair.
+    </Tip>
+  </Step>
+  <Step title="Finish setup">
+    Once connected, click **Finish** on the Welcome to DS4Windows screen. Configure your controller and start DS4Windows in the main window.
+
+    ![DS4Windows main window](/images/controllers/ps4-final.png)
+  </Step>
+  <Step title="Test in game">
+    Launch a game and check that your controller works.
+
+    <Note>
+    DS4Windows must be running to detect your controller, so enable it on startup in the settings.
+    </Note>
+  </Step>
+</Steps>
+
+## PS3 Controllers
+
+Like the other PlayStation controllers, PS3 controllers need additional software to work outside of Steam on Windows. There are several tools that work, but this guide uses ScpToolkit.
+
+<Steps>
+  <Step title="Download ScpToolkit">
+    Download [ScpToolkit](https://github.com/nefarius/ScpToolkit/releases/download/v1.7.277.16103-BETA/ScpToolkit_Setup.exe).
+  </Step>
+  <Step title="Run the setup">
+    Open the downloaded setup and click **Next** without changing any settings. At the end, click **Run Driver Installer**.
+  </Step>
+  <Step title="Install the drivers">
+    Follow all the on-screen instructions and read everything carefully — you need to initialize the DualShock controller and install the required drivers. Clicking **Next** does not install anything; you have to click the install buttons shown on screen, like the one below. You can skip installs you don't need, such as Bluetooth.
+
+    ![ScpToolkit driver installer](/images/controllers/ps3-install.png)
+  </Step>
+</Steps>
+
+<Tip>
+If your controller still isn't working, open the `ScpServer` application (in the ScpToolkit folder) and start it manually. The `ScpSettings` application lets you change settings such as rumble and joystick dead zones.
+</Tip>
+
+## Games Without Native Controller Support
+
+Some games have no built-in controller support. For these, you can use **Steam Input**, which maps your controller to keyboard and mouse inputs. This works for both DualSense and Xbox controllers since Steam supports both — **DS4Windows is not needed** here.
+
+| Game | Multiplayer exe | Singleplayer exe |
+|------|-----------------|------------------|
+| Call of Duty (COD1) | `CoDMP.exe` | `CoDSP.exe` |
+| United Offensive (CODUO) | `CoDUOMP.exe` | `CoDUOSP.exe` |
+| Call of Duty 2 (COD2) | `CoD2MP_s.exe` | `CoD2SP_s.exe` |
+| Call of Duty 4 (COD4) | `iw3mp.exe` | `iw3sp_mod.exe` |
+| Modern Warfare 3 (IW5-Mod, SP only) | — | `iw5-mod.exe` |
+
+<Info>
+These are community-made layouts, not official controller support. The game still treats you as if you're playing on keyboard and mouse, since Steam Input simply sends keyboard and mouse inputs from your controller.
+</Info>
+
+<Steps>
+  <Step title="Add the game as a non-Steam game">
+    In Steam, click **Games** > **Add a Non-Steam Game to My Library...**
+
+    ![Add a non-Steam game](/images/controllers/steam-add-non-steam-game.png)
+
+    Click **Browse**, then navigate to your game's install folder and select the correct exe from the table above.
+
+    <Tip>
+    To find your install folder quickly, open the CB Launcher, select your game, and click **Browse Local Files**.
+    </Tip>
+  </Step>
+  <Step title="Enable Steam Input">
+    Connect your controller, then open the game's page in your Steam library. Click the **controller icon** near the top right.
+
+    ![Controller icon on the game page](/images/controllers/steam-game-page-controller.png)
+  </Step>
+  <Step title="Open Community Layouts">
+    In the layout window, click **Community Layouts** to see all public presets made for this exe by other players.
+
+    ![Community Layouts tab](/images/controllers/steam-community-layouts.png)
+  </Step>
+  <Step title="Choose a layout">
+    Pick a layout and apply it. Layouts made for your game will show up under their creator's name — for example, the COD1 layouts by **Synced-Spider**.
+  </Step>
+  <Step title="Launch and play">
+    Launch the game from Steam (via the non-Steam game entry you added) and your controller will work through the layout you selected.
+  </Step>
+</Steps>
+
+## My Controller Still Isn't Working
+
+<AccordionGroup>
+  <Accordion title="Any controller">
+    - Make sure the controller is enabled in the game's settings, usually under **Settings** > **Controls** > **Gamepad**.
+    - Try your controller in an actual match rather than the menus — not all games support controllers in the menus.
+    - Double-check that you unticked the right Steam settings (see the top of this page) or fully exited Steam by right-clicking the Steam icon in the Windows taskbar tray and clicking **Exit**.
+  </Accordion>
+  <Accordion title="DS4Windows (PS4 / PS5)">
+    Make sure the **default** profile is selected.
+
+    ![DS4Windows profile selection](/images/controllers/ds4windows-main.png)
+
+    Then click **Edit**, go to the **Other** tab (far right), and make sure **Emulated Controller** is set to **Xbox 360**.
+
+    ![DS4Windows emulated controller setting](/images/controllers/ds4windows-profile.png)
+  </Accordion>
+  <Accordion title="World at War (T4)">
+    If everything looks right but your controller still isn't working on World at War, try [applying the game's controller config](https://plutonium.pw/docs/client/t4/rebinding-controller/).
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+If you need more help or support, please join our [Discord](https://cbservers.xyz/discord).
+
+---
+
+*Credit to [Plutonium](https://plutonium.pw/) — this guide is adapted from their original [Controller Support guide](https://plutonium.pw/docs/controllers/).*

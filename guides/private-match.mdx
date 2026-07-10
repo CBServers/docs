@@ -8,8 +8,9 @@ description: "Connect and play with friends using Discord, Radmin VPN, or port f
 Due to the nature of these community clients being separated from Steam's infrastructure, you can't add friends through Steam and join their games directly. The connection method depends on which game you're playing:
 
 - **Discord friends (easiest):** BOIII, IW6x, S1x, H1-Mod, and IW7-Mod can invite Discord friends straight into a private match with no extra software. [Jump to this method](#play-with-discord-friends-easiest).
-- **Built-in friends system:** Plutonium clients (T4, IW5-Mod, T5, T6) use their own in-game friends list. [Jump to this method](#games-with-built-in-friends).
+- **Built-in friends system:** Plutonium clients (T4, IW5, T5, T6) use their own in-game friends list. [Jump to this method](#games-with-built-in-friends).
 - **Radmin VPN or port forwarding:** Every other client, and a fallback for the clients above if the Discord method doesn't work. [Jump to this method](#radmin-vpn-or-port-forwarding).
+- **External guides:** Modern Warfare 2 SP/Spec Ops (IW4-SP), Modern Warfare 3 SP/Spec Ops (IW5-Mod), and Black Ops 4 (Project BO4) each have their own external guide. [Jump to this method](#external-guides).
 
 ## Play with Discord Friends (Easiest)
 
@@ -38,9 +39,13 @@ The following clients let you invite Discord friends straight into your private 
   </Step>
   <Step title="Invite friends">
     Click the file attachment (**+**) button in a friend's DM or any text channel to send an invite. Friends can also join directly from your Discord status without an invite.
+
+    <Info>
+    Make sure Discord is running and **Activity Status** is enabled so your game shows up.
+    </Info>
   </Step>
-  <Step title="Close when finished">
-    Done playing? Open the pause menu and click **Close to Friends** (or run `nat_host` again in the console) to lock the match back down.
+  <Step title="Close match">
+    Want to close the match after a friend joins? Open the pause menu and click **Close to Friends** (or run `nat_host` again in the console).
   </Step>
 </Steps>
 
@@ -53,10 +58,6 @@ Launch the game in the same mode as the host before joining — for example, joi
 <Tabs>
   <Tab title="With Discord">
     Click **Join** on your friend's Discord status, or accept their invite. You'll connect automatically — no IP or console commands needed.
-
-    <Info>
-    Make sure Discord is running and **Activity Status** is enabled so your game shows up.
-    </Info>
   </Tab>
   <Tab title="Manually (console)">
     Use this if you'd rather not use Discord, or your game isn't showing up there.
@@ -89,16 +90,17 @@ Some clients handle private matches through their own friends system rather than
 | Game | Join Guide |
 |------|-----------|
 | World at War MP/ZM (T4) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#t4) |
-| Modern Warfare 3 MP (IW5-Mod) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#iw5) |
+| Modern Warfare 3 MP (IW5) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#iw5) |
 | Black Ops MP/ZM (T5) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#t5) |
 | Black Ops 2 MP/ZM (T6) | [Plutonium custom games guide](https://plutonium.pw/docs/custom-games/#t6) |
 
-## Singleplayer / Spec Ops Guides
+## External Guides
 
-For singleplayer or Spec Ops private matches, refer to these external guides:
+Some clients handle private matches differently enough that they're best covered by their own external guide:
 
 - [Modern Warfare 2 SP / Spec Ops (IW4-SP)](https://forum.alterware.dev/t/iw4-singleplayer-spec-ops-private-match-guide/55)
 - [Modern Warfare 3 SP / Spec Ops (IW5-Mod)](https://forum.alterware.dev/t/iw5-singleplayer-spec-ops-mp-private-match-guide/1068)
+- [Black Ops 4 (Project BO4)](https://shield-bo4.gitbook.io/document/playing-online/how-to-connect-with-friends)
 
 ## Radmin VPN or Port Forwarding
 
@@ -133,6 +135,10 @@ This is the only method for IW4x and HMW, and the fallback for BOIII, IW6x, S1x,
     <Steps>
       <Step title="Install Radmin VPN">
         Download and install [Radmin VPN](https://www.radmin-vpn.com/).
+
+        <Note>
+        Steps 2 & 3 may not be necessary if you already allowed the client through Windows Firewall when you first launched it.
+        </Note>
       </Step>
       <Step title="Allow client through Windows Firewall">
         1. Go to Windows Firewall settings
@@ -230,6 +236,10 @@ This is the only method for IW4x and HMW, and the fallback for BOIII, IW6x, S1x,
         <Warning>
         Only recommended if your public IP is static.
         </Warning>
+
+        <Note>
+        Steps 2 & 3 may not be necessary if you already allowed the client through Windows Firewall when you first launched it.
+        </Note>
       </Step>
       <Step title="Create Windows Firewall inbound rule">
         1. Open Windows Defender Firewall with Advanced Security
@@ -244,9 +254,6 @@ This is the only method for IW4x and HMW, and the fallback for BOIII, IW6x, S1x,
         4. Ensure all boxes are ticked, then click **OK**
 
         [Video guide for firewall settings](https://www.youtube.com/watch?v=Kxy36eKoYNk)
-      </Step>
-      <Step title="Disable antivirus interference">
-        Ensure no other antivirus programs are blocking or filtering network access to the application.
       </Step>
       <Step title="Find your public IP">
         Visit [whatismyipaddress.com](https://whatismyipaddress.com/) and note down your IPv4 address.

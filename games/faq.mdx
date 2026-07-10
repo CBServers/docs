@@ -28,6 +28,14 @@ This page covers common issues and questions specific to individual game clients
     /name yourname
     ```
   </Accordion>
+
+  <Accordion title="How do I unlock all items?">
+    Most clients let you unlock everything instantly, though the method varies. See the [Unlock All guide](/guides/unlock-all) for per-client instructions.
+  </Accordion>
+
+  <Accordion title="How do I use a controller?">
+    Xbox controllers are plug-and-play on natively supported games, while PlayStation controllers and games without native support need extra setup. See the [Controller guide](/guides/controllers) for full instructions.
+  </Accordion>
 </AccordionGroup>
 
 ## HMW (HorizonMW)
@@ -38,13 +46,25 @@ This page covers common issues and questions specific to individual game clients
   </Accordion>
 
   <Accordion title="How do I unlock all items in HMW?">
-    Use the "Unlock All" button in the launcher on the HMW page. This feature was recently fixed.
+    In-game, go to **Play Online → Personalization → Stats**. See the [unlock all guide](/guides/unlock-all) for other clients.
   </Accordion>
 
   <Accordion title="How do I fix the 'Disk read imagefile59' error?">
     Delete `config_mp.cfg` from your `players2` folder. When you load back up, you'll need to redo your settings.
 
     Then, make sure you keep **"Fill remaining memory"** turned off. This can be found in **Options → Graphics**.
+  </Accordion>
+</AccordionGroup>
+
+## H2-Mod (MW2 Campaign Remastered)
+
+<AccordionGroup>
+  <Accordion title="I get crashes when loading certain maps">
+    If you get crashes that show errors like `Create2DTexture(...) failed ...` or `IDXGISwapChain::Present failed: ...` when loading certain maps, try:
+    - Disabling shader preloading **(most important)**
+    - Lowering graphics settings
+    - Freeing up RAM (close programs)
+    - Updating your GPU drivers
   </Accordion>
 </AccordionGroup>
 
