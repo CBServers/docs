@@ -1,26 +1,50 @@
 ---
-title: "How to use Controller"
+title: "How to use a Controller"
 description: "Set up Xbox, PlayStation, and other controllers for the game clients"
 ---
 
 ## Introduction
 
-Most of the game clients support controllers. The setup depends on your controller and whether the game has native controller support:
+Most of the game clients support controllers. How you set one up depends first on whether your game has [native controller support](#games-with-native-controller-support).
 
-- **Xbox controllers:** Plug-and-play on any natively supported game. [Jump to this method](#xbox-controllers).
+**Natively supported games** — connect your controller, then follow the section for your controller type:
+
+- **Xbox controllers:** Plug-and-play. [Jump to this method](#xbox-controllers).
 - **PS4 & PS5 controllers:** Need DS4Windows to work outside of Steam. [Jump to this method](#ps4--ps5-controllers).
 - **PS3 controllers:** Need ScpToolkit to work outside of Steam. [Jump to this method](#ps3-controllers).
-- **Games without native support:** COD1, CODUO, COD2, COD4, and MW3 (IW5-Mod) rely on Steam Input to map a controller to keyboard and mouse. [Jump to this method](#games-without-native-controller-support).
+
+**Games without native support** — COD1, CODUO, COD2, COD4 (multiplayer), and MW3 (IW5-Mod) instead use [Steam Input](#games-without-native-controller-support), which maps your controller to keyboard and mouse and works with any controller.
+
+## Games With Native Controller Support
+
+These clients have built-in controller support. Just connect your controller using the method for your controller type below — no Steam Input layout needed.
+
+- Modern Warfare (COD4) — *singleplayer only; multiplayer uses Steam Input*
+- World at War (T4)
+- Modern Warfare 2 (IW4x)
+- Modern Warfare 3 (IW5) — *multiplayer only; singleplayer (IW5-Mod) uses Steam Input*
+- Black Ops (T5)
+- Black Ops 2 (T6)
+- Ghosts (IW6x)
+- Advanced Warfare (S1x)
+- Black Ops 3 (BOIII)
+- Modern Warfare Remastered (H1-Mod)
+- Infinite Warfare (IW7-Mod)
+- Black Ops 4 (Project BO4)
+- MW2 Campaign Remastered (H2-Mod)
+- HorizonMW (HMW)
 
 <Warning>
-This applies only to games with **native controller support**. Games that rely on Steam Input are covered separately below — do **not** disable Steam's controller support for those.
-
-For natively supported games, disable Steam's controller support (or exit Steam completely) before using a controller.
+Before using a controller on these games, disable Steam's controller support (or exit Steam completely).
 
 Go to **Steam** > **Settings** > **Controller** > **General Controller Settings** and **untick** the checkboxes shown below.
 
 ![Disable Steam controller support](/images/controllers/disable-steam-controller.png)
 </Warning>
+
+<Note>
+On most of these games you still need to turn the controller on in the in-game settings before it works, usually under **Settings** > **Controls** > **Gamepad**.
+</Note>
 
 ## Xbox Controllers
 
@@ -117,7 +141,7 @@ Some games have no built-in controller support. For these, you can use **Steam I
 | Call of Duty (COD1) | `CoDMP.exe` | `CoDSP.exe` |
 | United Offensive (CODUO) | `CoDUOMP.exe` | `CoDUOSP.exe` |
 | Call of Duty 2 (COD2) | `CoD2MP_s.exe` | `CoD2SP_s.exe` |
-| Call of Duty 4 (COD4) | `iw3mp.exe` | `iw3sp_mod.exe` |
+| Call of Duty 4 (COD4, MP only) | `iw3mp.exe` | — |
 | Modern Warfare 3 (IW5-Mod, SP only) | — | `iw5-mod.exe` |
 
 <Info>
@@ -160,7 +184,7 @@ These are community-made layouts, not official controller support. The game stil
   <Accordion title="Any controller">
     - Make sure the controller is enabled in the game's settings, usually under **Settings** > **Controls** > **Gamepad**.
     - Try your controller in an actual match rather than the menus — not all games support controllers in the menus.
-    - Double-check that you unticked the right Steam settings (see the top of this page) or fully exited Steam by right-clicking the Steam icon in the Windows taskbar tray and clicking **Exit**.
+    - Double-check that you unticked the right Steam settings (see [Games With Native Controller Support](#games-with-native-controller-support)) or fully exited Steam by right-clicking the Steam icon in the Windows taskbar tray and clicking **Exit**.
   </Accordion>
   <Accordion title="DS4Windows (PS4 / PS5)">
     Make sure the **default** profile is selected.
