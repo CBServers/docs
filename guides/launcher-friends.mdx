@@ -1,0 +1,170 @@
+---
+title: "Play with Friends Using CB Launcher"
+description: "Link Discord to the CB Servers Launcher to see your friends, invite them, and join their matches in one click"
+---
+
+## Introduction
+
+The CB Servers Launcher has a built-in **Friends** page. Link your Discord account once and the launcher shows which of your Discord friends are playing, what they're playing, and gives you a **Join** or **Invite** button next to them. No IPs, no console commands, no Radmin.
+
+This is the easiest way to play together. If your client isn't in the supported list below, use the [private match guide](/guides/private-match) instead.
+
+### Supported clients
+
+| Game | Client | Friends list | Join / Invite |
+|------|--------|--------------|---------------|
+| Black Ops 3 | BOIII | Yes | Yes |
+| Ghosts | IW6x | Yes | Yes |
+| Advanced Warfare | S1x | Yes | Yes |
+| Modern Warfare Remastered | H1-Mod | Yes | Yes |
+| Infinite Warfare | IW7-Mod | Yes | Yes |
+| Everything else (T4, IW4x, T5, IW5, T6, CoD4x, BO4, HMW, ...) | – | Yes | No |
+
+<Note>
+Every client shows up on the Friends page and on your Discord profile, so friends can always see what you're playing. The **Join** and **Invite** buttons only work on the five clients above, because those are the ones CB Servers maintains. For the rest, see the [private match guide](/guides/private-match).
+</Note>
+
+## Prerequisites
+
+- The CB Servers Launcher, [installed](/launcher/install) and running (not in offline mode)
+- A Discord account (13+)
+- Both players linked and with the launcher open
+- You and your friend must already be Discord friends
+- Discord's **Activity Status** (share your detected activities) enabled on both sides
+
+## Link Your Discord Account
+
+<Steps>
+  <Step title="Open the Friends page">
+    Click **Friends** in the launcher sidebar.
+  </Step>
+  <Step title="Start the link">
+    Click **Link launcher to Discord account**. A Discord authorization page opens in your browser.
+  </Step>
+  <Step title="Approve access">
+    Approve the request. The launcher shows *Connecting to Discord...* and then your friends list appears.
+  </Step>
+</Steps>
+
+You can check the link status any time under **Settings → Discord account**, which also has the **Unlink** button.
+
+<Info>
+While linked, your Discord profile shows *Playing CB Launcher* with the game's artwork, name, mode, map and player count, for example **Black Ops III - Zombies on Der Eisendrache**. Your regular Discord friends see this card whether or not they use CB Launcher.
+</Info>
+
+## Joining a Friend
+
+Open the **Friends** page. Each friend row shows what they're playing, and a button appears when you can get in:
+
+| Button | What it means |
+|--------|---------------|
+| **Join** | Their match is open. One click, no approval needed. |
+| **Ask to Join** | They're hosting a private match that isn't open yet. Your friend gets a prompt to let you in. |
+| **In your game** | You're already playing together. |
+| *(no button)* | They're not in a joinable match, or their client doesn't support joining. |
+
+<Steps>
+  <Step title="Click Join or Ask to Join">
+    If the game isn't already running, the launcher asks to launch it first. Confirm and it starts the right game in the right mode for you.
+  </Step>
+  <Step title="Wait for the connection">
+    If the game was already open, you connect immediately. On a cold launch, wait at the main menu, press **Play**, and the launcher connects you as soon as the game is ready.
+  </Step>
+  <Step title="Ask to Join only: wait for approval">
+    Your friend gets a prompt in their launcher. When they approve, their match opens to friends and you connect automatically.
+  </Step>
+</Steps>
+
+<Tip>
+Already in a different game or a different mode? The launcher handles it. It closes what's running and relaunches the correct game and mode before connecting, so an Advanced Warfare Survival invite works even if you're sitting in Multiplayer.
+</Tip>
+
+## Inviting a Friend
+
+An **Invite** button appears next to your online friends whenever your own match can be joined.
+
+<Steps>
+  <Step title="Get into a joinable match">
+    Join any public/dedicated server, or host a private match and open it (see below).
+  </Step>
+  <Step title="Send the invite">
+    Go to **Friends** and click **Invite** next to the friend you want. You'll see an *Invite sent* toast.
+  </Step>
+  <Step title="Your friend accepts">
+    They get a popup in their launcher with **Join** and **Decline**. Accepting connects them, launching their game first if it isn't running.
+  </Step>
+</Steps>
+
+<Note>
+Inviting from a **closed** private match opens your match to friends automatically. You don't have to open it first, and it stays open afterwards.
+</Note>
+
+### Hosting a private match
+
+To be joinable while hosting your own match rather than playing on a dedicated server:
+
+<Steps>
+  <Step title="Start the private match">
+    Launch the game through the launcher and start a private match as usual.
+  </Step>
+  <Step title="Open it to friends">
+    Open the pause menu and click **Open to Friends**.
+
+    <Tip>
+    On BOIII, some custom maps and mods replace the pause menu. Open the console (`` ~ ``) and run `nat_host` instead, which does the same thing.
+    </Tip>
+  </Step>
+</Steps>
+
+Once open, friends see **Join** instead of **Ask to Join**, and their join requests are approved silently. You can close the match again with **Close to Friends** (or `nat_host` a second time).
+
+## Receiving Invites and Requests
+
+The launcher will get your attention even when it's in the background:
+
+- A popup in the launcher with **Join** / **Decline** (or **Approve** / **Decline** for a join request)
+- A Windows notification and a taskbar flash
+- On BOIII, a passive in-game toast telling you who invited you. Accept it from the launcher or Discord; the toast is informational only.
+
+<Note>
+Approving a join request while your private match is still closed will open your match to friends. The prompt says so explicitly.
+</Note>
+
+## Joining from Discord
+
+You don't have to use the launcher UI at all. Because the launcher publishes real Discord rich presence, your friends can click **Join** or **Ask to Join** straight from your Discord profile card, or accept an invite in a DM. Their launcher picks it up, launches the right game, and connects them the same way.
+
+Both people still need the launcher installed, linked and running.
+
+## In-Game Friends List (Black Ops 3)
+
+BOIII goes one step further: your CB Launcher friends appear in the game's native **Social → Friends** menu, with live presence such as *Playing Team Deathmatch on Nuk3town*, and the in-game **JOIN GAME** and **INVITE GAME** buttons work on them.
+
+The list refreshes while it's open, and the invite button only appears when an invite would actually go through.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="A friend shows as Online but I know they're playing">
+    They have Discord's **Activity Status** (share your detected activities) turned off, or their launcher isn't running. With activity sharing off you can still invite them, but you can never see or join their match. Ask them to enable it in **Discord → Settings → Activity Privacy**.
+  </Accordion>
+  <Accordion title="There's no Join or Ask to Join button">
+    Check, in order: their client is one of the five supported ones, they're actually in a match (not the menu), their match has a free slot, they haven't closed it to friends, and both launchers are open and linked.
+  </Accordion>
+  <Accordion title="There's no Invite button">
+    The Invite button only appears when **you** are joinable. Join a dedicated server, or host a private match. The friend also has to be online or idle on Discord.
+  </Accordion>
+  <Accordion title='"Discord is rate limiting invites, try again in Xs"'>
+    Discord limits how fast invites and join requests can be sent. Wait the number of seconds shown and try again.
+  </Accordion>
+  <Accordion title="My friends list is empty or says the friends service is unreachable">
+    Make sure the launcher isn't in offline mode, which disables Discord entirely. If the notice says the friends service is unreachable, the list falls back to showing only friends currently in the launcher. It recovers on its own.
+  </Accordion>
+  <Accordion title="The connection fails or times out">
+    Joining a friend's private match uses NAT hole punching, which works on normal home connections but can be blocked by mobile hotspots, hotel and public Wi-Fi, or a strict firewall. Allow the client through Windows Firewall, and if it still fails, fall back to [Radmin VPN or port forwarding](/guides/private-match#radmin-vpn-or-port-forwarding).
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+If you need more help or support, please join our [Discord](https://cbservers.xyz/discord).

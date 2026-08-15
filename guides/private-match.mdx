@@ -1,20 +1,21 @@
 ---
 title: "How to Play Private Match with Friends"
-description: "Connect and play with friends using Discord, Radmin VPN, or port forwarding"
+description: "Connect and play with friends using CB Launcher, Discord, Radmin VPN, or port forwarding"
 ---
 
 ## Introduction
 
 Due to the nature of these community clients being separated from Steam's infrastructure, you can't add friends through Steam and join their games directly. The connection method depends on which game you're playing:
 
-- **Discord friends (easiest):** BOIII, IW6x, S1x, H1-Mod, and IW7-Mod can invite Discord friends straight into a private match with no extra software. [Jump to this method](#play-with-discord-friends-easiest).
+- **CB Launcher friends (easiest):** BOIII, IW6x, S1x, H1-Mod, and IW7-Mod can invite and join friends from the launcher itself. This is the recommended method and has its own guide: [Play with Friends Using CB Launcher](/guides/launcher-friends).
+- **Discord or a match token:** the same five clients, for players running the client directly instead of through the launcher. [Jump to this method](#playing-without-the-launcher).
 - **Built-in friends system:** Plutonium clients (T4, IW5, T5, T6) use their own in-game friends list. [Jump to this method](#games-with-built-in-friends).
-- **Radmin VPN or port forwarding:** Every other client, and a fallback for the clients above if the Discord method doesn't work. [Jump to this method](#radmin-vpn-or-port-forwarding).
+- **Radmin VPN or port forwarding:** Every other client, and a fallback for the clients above if a direct connection can't be established. [Jump to this method](#radmin-vpn-or-port-forwarding).
 - **External guides:** Modern Warfare 2 SP/Spec Ops (IW4-SP), Modern Warfare 3 SP/Spec Ops (IW5-Mod), and Black Ops 4 (Project BO4) each have their own external guide. [Jump to this method](#external-guides).
 
-## Play with Discord Friends (Easiest)
+## Play with Friends on CB Launcher (Recommended)
 
-The following clients let you invite Discord friends straight into your private match. Connections are made automatically through NAT hole punching — no Radmin, Hamachi, or port forwarding required.
+The following clients support joining and inviting friends **from the launcher**, with no IPs, console commands, or extra software:
 
 | Game | Client |
 |------|--------|
@@ -23,6 +24,20 @@ The following clients let you invite Discord friends straight into your private 
 | Advanced Warfare | S1x |
 | Modern Warfare Remastered | H1-Mod |
 | Infinite Warfare | IW7-Mod |
+
+Link your Discord account once and the launcher's **Friends** page lists your Discord friends, shows what they're playing, and gives you **Join**, **Ask to Join** and **Invite** buttons. It starts the right game in the right mode and connects you automatically, and the host doesn't have to open their match first.
+
+<Card title="Play with Friends Using CB Launcher" icon="user-group" href="/guides/launcher-friends">
+  Linking Discord, hosting, joining, inviting, and troubleshooting
+</Card>
+
+<Tip>
+Use the launcher's buttons rather than Discord's own invite and join buttons. Discord limits how fast invites and join requests can be sent, and accepting in Discord while the host's private match is still closed costs an extra approval round trip. The launcher avoids both.
+</Tip>
+
+## Playing Without the Launcher
+
+Use this only if you run the client directly instead of through the CB Servers Launcher, or you haven't linked your Discord account to it. It covers the same five clients as above. Connections are still made automatically through NAT hole punching — no Radmin, Hamachi, or port forwarding required.
 
 ### Hosting a Match
 
@@ -104,7 +119,7 @@ Some clients handle private matches differently enough that they're best covered
 
 ## Radmin VPN or Port Forwarding
 
-This is the only method for IW4x and HMW, and the fallback for BOIII, IW6x, S1x, H1-Mod, and IW7-Mod when the [Discord method](#play-with-discord-friends-easiest) doesn't work.
+This is the only method for IW4x and HMW, and the fallback for BOIII, IW6x, S1x, H1-Mod, and IW7-Mod when neither the [launcher](/guides/launcher-friends) nor the [Discord method](#playing-without-the-launcher) can connect you.
 
 ### Client Port Numbers
 
