@@ -136,7 +136,7 @@
     "primary": {
       "type": "button",
       "label": "Discord",
-      "href": "https://cbservers.xyz/discord"
+      "href": "https://discord.gg/WyJQCwCCGW"
     },
     "links": [
       {
@@ -159,7 +159,7 @@
   },
   "footer": {
     "socials": {
-      "discord": "https://cbservers.xyz/discord",
+      "discord": "https://discord.gg/WyJQCwCCGW",
       "x": "https://x.com/ServersCB",
       "github": "https://github.com/CBServers"
     }
