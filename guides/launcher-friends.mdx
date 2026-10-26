@@ -58,8 +58,8 @@ Open the **Friends** page. Each friend row shows what they're playing, and a but
 
 | Button | What it means |
 |--------|---------------|
-| **Join** | Their match is open. One click, no approval needed. |
-| **Ask to Join** | They're hosting a private match that isn't open yet. Your friend gets a prompt to let you in. |
+| **Join** | Their match (or BOIII lobby) is open. One click, no approval needed. |
+| **Ask to Join** | They're hosting a private match that isn't open yet, or a BOIII lobby set to **Invite Only**. Your friend gets a prompt to let you in. |
 | **In your game** | You're already playing together. |
 | *(no button)* | They're not in a joinable match, or their client doesn't support joining. |
 
@@ -96,7 +96,7 @@ An **Invite** button appears next to your online friends whenever your own match
 </Steps>
 
 <Note>
-Inviting from a **closed** private match opens your match to friends automatically. You don't have to open it first, and it stays open afterwards.
+Inviting from a **closed** private match opens your match to friends automatically. You don't have to open it first, and it stays open afterwards. On BOIII it opens as **Invite Only**, so other friends still have to ask.
 </Note>
 
 ### Hosting a private match
@@ -118,6 +118,19 @@ To be joinable while hosting your own match rather than playing on a dedicated s
 
 Once open, friends see **Join** instead of **Ask to Join**, and their join requests are approved silently. You can close the match again with **Close to Friends** (or `nat_host` a second time).
 
+### Lobby Privacy on Black Ops 3
+
+On BOIII your lobby is your party: friends can join you from the menus, follow you into every match, and join a match already in progress. Set who can join in **Social → Party → Lobby Privacy**. Matches you start from the lobby use the same setting.
+
+| Lobby Privacy | Friends see | Who gets in |
+|---------------|-------------|-------------|
+| **Open** | **Join** | Anyone, including a plain `connect` to your IP |
+| **Friends Only** (default) | **Join** | Friends joining through the launcher, Discord or a match token, and players on your LAN or VPN |
+| **Invite Only** | **Ask to Join** | Friends you invite or approve |
+| **Closed** | *(no button)* | Nobody new; players already with you stay |
+
+Inviting a friend while your lobby is **Closed** switches it to **Invite Only**. In a match, **Open to Friends** / **Close to Friends** in the pause menu changes it for that match only; your lobby setting comes back afterwards.
+
 ## Receiving Invites and Requests
 
 The launcher will get your attention even when it's in the background:
@@ -127,7 +140,7 @@ The launcher will get your attention even when it's in the background:
 - On BOIII, a passive in-game toast telling you who invited you. Accept it from the launcher or Discord; the toast is informational only.
 
 <Note>
-Approving a join request while your private match is still closed will open your match to friends. The prompt says so explicitly.
+Approving a join request while your private match is still closed will open your match to friends. The prompt says so explicitly. On BOIII only an **Invite Only** lobby or match can be asked to join, and approving lets that friend in without opening it to everyone.
 </Note>
 
 ## Joining from Discord
@@ -149,7 +162,7 @@ The list refreshes while it's open, and the invite button only appears when an i
     They have Discord's **Activity Status** (share your detected activities) turned off, or their launcher isn't running. With activity sharing off you can still invite them, but you can never see or join their match. Ask them to enable it in **Discord → Settings → Activity Privacy**.
   </Accordion>
   <Accordion title="There's no Join or Ask to Join button">
-    Check, in order: their client is one of the five supported ones, they're actually in a match (not the menu), their match has a free slot, they haven't closed it to friends, and both launchers are open and linked.
+    Check, in order: their client is one of the five supported ones, they're actually in a match (not the menu; BOIII lobbies are the exception), their match has a free slot, they haven't closed it to friends (on BOIII, Lobby Privacy isn't **Closed**), and both launchers are open and linked.
   </Accordion>
   <Accordion title="There's no Invite button">
     The Invite button only appears when **you** are joinable. Join a dedicated server, or host a private match. The friend also has to be online or idle on Discord.

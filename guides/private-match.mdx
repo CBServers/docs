@@ -39,6 +39,10 @@ Use the launcher's buttons rather than Discord's own invite and join buttons. Di
 
 Use this only if you run the client directly instead of through the CB Servers Launcher, or you haven't linked your Discord account to it. It covers the same five clients as above. Connections are still made automatically through NAT hole punching — no Radmin, Hamachi, or port forwarding required.
 
+<Note>
+**BOIII:** friends can join your lobby from the menus, not just your matches. They join your party, follow you into each match, and can also join a match already in progress. Who can join is set in **Social → Party → Lobby Privacy** (Open, Friends Only, Invite Only or Closed) and starts at **Friends Only**, so your lobby and the matches you start from it are already open to friends. See [Lobby Privacy on Black Ops 3](/guides/launcher-friends#lobby-privacy-on-black-ops-3).
+</Note>
+
 ### Hosting a Match
 
 <Steps>
@@ -51,6 +55,8 @@ Use this only if you run the client directly instead of through the CB Servers L
     <Tip>
     Don't see the button? Some custom maps and mods (especially on BOIII) override the in-game menus. Open the console (`` ~ ``) and run `nat_host` instead — it does the exact same thing.
     </Tip>
+
+    On BOIII, a match started from an open lobby is already open, so the button reads **Close to Friends**; skip this step.
   </Step>
   <Step title="Invite friends">
     Click the file attachment (**+**) button in a friend's DM or any text channel to send an invite. Friends can also join directly from your Discord status without an invite.
@@ -82,10 +88,14 @@ Launch the game in the same mode as the host before joining — for example, joi
         Open the console (`` ~ ``) and run `nat_host`. It prints a match token:
 
         ```
-        [nat] opened private match to friends, token=a1b2c3d4e5f6a7b8
+        [nat] open (FRIENDS ONLY), token=a1b2c3d4e5f6a7b8
         ```
 
         Share that token with your friend.
+
+        <Note>
+        On BOIII the lobby opens at startup (unless Lobby Privacy is **Closed**), so the token is already in the console; look for `token=`. Running `nat_host` while it's open closes it instead. Run it once more to reopen with a fresh token.
+        </Note>
       </Step>
       <Step title="Joiner: connect with the token">
         Open the console (`` ~ ``) and run `nat_join <token>` (e.g. `nat_join a1b2c3d4e5f6a7b8`). You'll connect automatically.
@@ -272,6 +282,9 @@ This is the only method for IW4x and HMW, and the fallback for BOIII, IW6x, S1x,
       </Step>
       <Step title="Find your public IP">
         Visit [whatismyipaddress.com](https://whatismyipaddress.com/) and note down your IPv4 address.
+      </Step>
+      <Step title="BOIII only: set Lobby Privacy to Open">
+        In **Social → Party**, set **Lobby Privacy** to **Open**. **Friends Only** admits LAN and VPN addresses (Radmin included) and friends joining through the launcher, Discord or a match token, so a plain `connect` to your public IP is refused with *This game is not open to you*.
       </Step>
     </Steps>
 
