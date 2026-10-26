@@ -55,7 +55,6 @@
             "group": "Guides",
             "pages": [
               "guides/index",
-              "guides/torrents",
               "guides/launcher-friends",
               "guides/private-match",
               "guides/controllers",
@@ -163,5 +162,11 @@
       "x": "https://x.com/ServersCB",
       "github": "https://github.com/CBServers"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/guides/torrents",
+      "destination": "/launcher"
+    }
+  ]
 }
